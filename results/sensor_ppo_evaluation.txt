@@ -1,0 +1,9 @@
+SENSOR-BASED PPO EVALUATION
+===========================
+Episodes: 30
+Successful episodes: 30
+Collision episodes: 0
+Success rate: 100.00%
+Collision rate: 0.00%
+Mean episode length: 40.77 steps
+Mean episode reward: 203.97
