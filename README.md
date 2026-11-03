@@ -82,4 +82,4 @@ Ensure that the model path and environment import in the animation script match 
 - Integrate with ROS 2 and test on a physical mobile robot.
 
 ## Conclusion
-The project demonstrates PPO-based autonomous navigation and obstacle avoidance in a 2D simulation. The trained policy achieved a 93.33% success rate and a 3.33% collision rate over 30 evaluation episodes. The visualization illustrates the robot's route and simulated LiDAR rays, providing a foundation for future sensor-driven and real-robot navigation work.
+The project demonstrates PPO-based autonomous navigation and obstacle avoidance in a 2D simulation. The trained policy achieved a 93.33% success rate and a 3.33% collision rate over 30 evaluation episodes. The visualization illustrates the robot's route and simulated LiDAR rays, providing a foundation for future sensor-driven and real-robot navigation work
