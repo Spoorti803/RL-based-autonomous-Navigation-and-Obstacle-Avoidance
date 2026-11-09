@@ -1,10 +1,16 @@
 # RL-Based Autonomous Navigation and Obstacle Avoidance
 
+![Status](https://img.shields.io/badge/status-actively%20developed-yellow)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)
+
 ## Project overview
 This project demonstrates reinforcement-learning-based navigation in a 2D simulated environment. A mobile robot learns to move from a start position to a goal while avoiding randomly positioned circular obstacles. The navigation policy uses Proximal Policy Optimization (PPO) with continuous movement actions.
 
 A simulated LiDAR visualization displays 32 rays around the robot. The rays illustrate obstacle directions and approximate distances.
+
 > 🚧 **Status: Actively under development.** Features and evaluation are being expanded.
+
 ## Objectives
 - Build a 2D robot navigation environment.
 - Train a PPO policy for continuous movement.
@@ -34,7 +40,7 @@ The trained model used for the demonstration is `models/ppo_navigation_v2.zip`.
 ## LiDAR visualization
 The animation displays 32 orange rays, red obstacle circles, a green goal marker, and the robot trajectory in blue.
 
-**Important:** The current LiDAR rays are calculated from known obstacle geometry for visualization. They are not fed into the PPO policy. The policy observations contain robot/goal coordinates and obstacle coordinates/radii.
+**Note:** The LiDAR rays are calculated from known obstacle geometry for visualization. They are not fed into the PPO policy, which observes robot/goal coordinates and obstacle coordinates/radii.
 
 ## Evaluation results
 Evaluation was performed over 30 episodes.
@@ -49,7 +55,6 @@ Evaluation was performed over 30 episodes.
 These results describe the tested simulation and do not guarantee identical performance for every possible obstacle layout.
 
 ## Project files
-Typical project files include:
 - `environment/navigation_env.py` — original environment implementation.
 - `navigation_env_v2.py` — improved environment used for the final trained model.
 - `training/` — training scripts.
@@ -67,13 +72,15 @@ python lidar_animation_v2.py
 
 Ensure that the model path and environment import in the animation script match the files in your project.
 
-## Limitations
-- The environment is 2D, not a 3D physics-based simulator.
-- The PPO policy uses obstacle coordinates and radii, not raw LiDAR or camera data.
-- LiDAR rays are visual-only in this implementation.
-- No physical robot, ROS 2 deployment, or Jetson integration has been completed.
-- Performance depends on the tested environment and random obstacle layouts.
+## Current scope
+- 2D simulated environment (no 3D physics).
+- The PPO policy observes robot/goal coordinates and obstacle coordinates/radii.
+- LiDAR rays are used for visualization only and are not fed to the policy.
+- Evaluated in simulation only; no physical robot deployment yet.
 
+## Update log
+- **v2** — Improved environment; trained policy reached 93.33% success and 3.33% collision rate over 30 evaluation episodes.
+- **v1** — Original 2D navigation environment and first PPO training setup.
 
-## Conclusion
-The project demonstrates PPO-based autonomous navigation and obstacle avoidance in a 2D simulation. The trained policy achieved a 93.33% success rate and a 3.33% collision rate over 30 evaluation episodes. The visualization illustrates the robot's route and simulated LiDAR rays, providing a foundation for future sensor-driven and real-robot navigation work.
+## Summary
+The project demonstrates PPO-based autonomous navigation and obstacle avoidance in a 2D simulation. The trained policy achieved a 93.33% success rate and a 3.33% collision rate over 30 evaluation episodes, and the visualization illustrates the robot's route and simulated LiDAR rays.
