@@ -4,7 +4,7 @@
 This project demonstrates reinforcement-learning-based navigation in a 2D simulated environment. A mobile robot learns to move from a start position to a goal while avoiding randomly positioned circular obstacles. The navigation policy uses Proximal Policy Optimization (PPO) with continuous movement actions.
 
 A simulated LiDAR visualization displays 32 rays around the robot. The rays illustrate obstacle directions and approximate distances.
-
+> 🚧 **Status: Actively under development.** Features and evaluation are being expanded.
 ## Objectives
 - Build a 2D robot navigation environment.
 - Train a PPO policy for continuous movement.
@@ -74,12 +74,6 @@ Ensure that the model path and environment import in the animation script match 
 - No physical robot, ROS 2 deployment, or Jetson integration has been completed.
 - Performance depends on the tested environment and random obstacle layouts.
 
-## Future enhancements
-- Feed simulated LiDAR range measurements into the PPO policy.
-- Extend the environment to 3D simulation.
-- Add dynamic obstacles and varied obstacle shapes.
-- Evaluate robustness across randomized environments.
-- Integrate with ROS 2 and test on a physical mobile robot.
 
 ## Conclusion
 The project demonstrates PPO-based autonomous navigation and obstacle avoidance in a 2D simulation. The trained policy achieved a 93.33% success rate and a 3.33% collision rate over 30 evaluation episodes. The visualization illustrates the robot's route and simulated LiDAR rays, providing a foundation for future sensor-driven and real-robot navigation work.
